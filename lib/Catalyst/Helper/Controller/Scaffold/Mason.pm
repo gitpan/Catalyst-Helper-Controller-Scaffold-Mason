@@ -3,7 +3,7 @@ package Catalyst::Helper::Controller::Scaffold::Mason;
 use strict;
 use Path::Class;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 NAME
 
@@ -13,7 +13,7 @@ Catalyst::Helper::Controller::Scaffold::Mason - Helper for Scaffolding
 
     # Imagine you want to generate a scaffolding controller MyApp::C::SomeTable
     # for a CDBI table class MyApp::M::CDBI::SomeTable
-    script/myapp_create.pl controller SomeTable Scaffold CDBI::SomeTable
+    script/myapp_create.pl controller SomeTable Scaffold::Mason CDBI::SomeTable
 
 =head1 DESCRIPTION
 
@@ -40,6 +40,8 @@ to the component config. Also, change your application class like this:
 =over 4
 
 =item mk_compclass
+
+Does the actual work. Called from helper api.
 
 =cut
 
