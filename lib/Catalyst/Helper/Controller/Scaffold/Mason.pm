@@ -3,7 +3,7 @@ package Catalyst::Helper::Controller::Scaffold::Mason;
 use strict;
 use Path::Class;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 NAME
 
@@ -234,7 +234,7 @@ __add__
 $message=>undef
 </%args>
 <p><%$message%></p>
-<form action="<% $base . '[% uri %]/do_add' %]" method="post">
+<form action="<% $base . '[% uri %]/do_add' %>" method="post">
 %foreach my $column ([%table_class%]->columns) {
 %next if ($column eq [%table_class%]->primary_column);
         <% $column %><br/>
